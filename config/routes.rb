@@ -9,6 +9,8 @@ PersonalSite::Application.routes.draw do
 
   resources :game, only: [:index]
 
+  resources :resume, only: [:index]
+
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
 
