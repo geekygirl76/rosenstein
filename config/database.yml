@@ -19,7 +19,7 @@ development:
   encoding: unicode
   database: PersonalSite_development
   pool: 5
-  username: PersonalSite
+
   password:
 
   # Connect on a TCP socket. Omitted by default since the client uses a
@@ -48,7 +48,7 @@ test:
   encoding: unicode
   database: PersonalSite_test
   pool: 5
-  username: PersonalSite
+
   password:
 
 production:
@@ -56,5 +56,5 @@ production:
   encoding: unicode
   database: PersonalSite_production
   pool: 5
-  username: PersonalSite
+
   password:
