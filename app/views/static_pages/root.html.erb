@@ -1,39 +1,143 @@
   <head>
 
     <style>
-	
+
     img{
     display: block;
       width:200px;
       height: auto;
     }
-	
-	
+
+  html, body, header, nav, ul, li, h2, a,form{
+    margin: 0;
+    border: 0;
+    padding: 0;
+    font: inherit;
+  vertical-align: baseline;
+  }
+
+  .group:after{
+    content: "";
+    display: block;
+    clear: both;
+  }
+
+  body{
+    background: rgb(202, 227, 221);
+    display: block;
+    font-family: sans-serif;
+    color: black;
+    padding: 20px;
+    size: 20px;
+  }
+
+  header{
+    display: block;
+    margin: auto;
+    width: 700px;
+  border: 1px solid black;
+  padding: 20px;
+  }
+
+  header > ul{
+    float left
+  }
+  header > ul > li{
+    float: right;
+  }
+
+  a{
+    text-decoration: none;
+    color: darkgreen;
+    font-weight: bold;
+  display: block;
+  padding: 20px;
+  }
+
+  li{
+    list-style:none;
+  }
+
+  a:hover{
+    color: black;
+    text-decoration: underline;
+  }
+
+  a.in-words{
+    display: inline-block;
+    padding: 0;
+  }
+
+  main{
+    width:700px;
+    height: 500px;
+  border: 1px solid black;
+  margin:auto;
+  padding: 20px;
+  border-bottom: 0;
+  border-top: 0;
+  }
+
+  footer{
+    width: 700px;
+    height: 50px;
+    border: 1px solid black;
+  margin: auto;
+  padding: 20px;
+  }
+
+  h1{
+    text-align: center;
+  }
+
+  p > ul{
+    float: right;
+  }
+
+  p> ul> li{
+    margin:20px;
+  font-size: 16px;
+  }
+
+  img{
+    float: left;
+  }
+
     </style>
 </head>
 
   <body>
-  <header>
-    <a href="./resume.pdf">Resume</a>
-    <a href="mailto:greekyogurtgirl@gmail.com">Email</a>
-    <a href="https://github.com/geekygirl76">Github</a>
-    <a href="https://www.linkedin.com/pub/ling-rosenstein/9b/19/639">LinkedIn</a>
+  <header class= "group">
+    <ul class="group">
+    <li><a href="./resume.pdf">Resume</a></li>
+    <li><a href="mailto:greekyogurtgirl@gmail.com">Email</a></li>
+    <li><a href="https://github.com/geekygirl76">Github</a></li>
+    <li><a href="https://www.linkedin.com/pub/ling-rosenstein/9b/19/639">LinkedIn</a></li>
+  </ul>
   </header>
   <main>
   <h1>Hello! I am Ling!</h1>
-
+<p >
+  <ul class="group">
+    <li>
   I love coding! I love to know that I can make things which benefit lots of people and which is a kind of rare skill. My dream is that one day half of the people in this world are playing my app or that people are using my algorithms 50 years after I die.
-
+  </li>
+ <li>
   Yeah I know very likely I will never reach those goals in my lifetime, but with ambitious goals, I will surely work hard so that I know everyday I am one step closer to my goal!
-
-  <p>
-    I love to use <a href="http://www.ilovediy.ninja">Ruby</a>, <a href="https://github.com/geekygirl76/Math">Python</a> and <a href="http://geekygirl76.github.io/StarTrek/">Javascript</a> to do fun things!
-  </p>
+  </li>
+  </ul>
+</p>
 
   <figure>
    <img src="<%= asset_path 'ling_rosenstein.jpg' %>">
   </figure>
   </main>
+
+
+  <footer>
+    I love to use <a class="in-words" href="http://www.ilovediy.ninja">Ruby</a>, <a class="in-words"  href="https://github.com/geekygirl76/Math">Python</a> and <a class="in-words"  href="http://geekygirl76.github.io/StarTrek/">Javascript</a> to do fun things!
+  </footer>
+
   </body>
 
-  </main>
+
