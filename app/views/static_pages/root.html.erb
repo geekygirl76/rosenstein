@@ -29,6 +29,7 @@
     color: black;
     padding: 20px;
     size: 20px;
+
   }
 
   header{
@@ -70,7 +71,7 @@
 
   main{
     width:700px;
-    height: 500px;
+    height: 550px;
   border: 1px solid black;
   margin:auto;
   padding: 20px;
@@ -101,7 +102,38 @@
 
   img{
     float: left;
+
   }
+
+
+
+ div.joke >  p.fun{
+    font-size:28;
+    font-weight: bold;
+  text-align: right;
+  margin-top:50px;
+  }
+
+  img.awesome{
+    width: 100px;
+    height: auto;
+  float: right;
+  margin-top: 30px;
+  }
+
+  div.joke{
+    display: block;
+  width:300px;
+  margin-left:50px;
+  margin-right:50px;
+  float:right;
+  }
+
+  strong{
+    font-weight:bold;
+
+  }
+
 
     </style>
 </head>
@@ -120,18 +152,38 @@
 <p >
   <ul class="group">
     <li>
-  I love coding! I love to know that I can make things which benefit lots of people and which is a kind of rare skill. My dream is that one day half of the people in this world are playing my app or that people are using my algorithms 50 years after I die.
+  I became interested in computer science since high school, but my parents sent me to college to study business. After 20 years' detour, with my husband's encouragement, I picked up my dream again.
   </li>
+  <br>
  <li>
-  Yeah I know very likely I will never reach those goals in my lifetime, but with ambitious goals, I will surely work hard so that I know everyday I am one step closer to my goal!
+  I learned about coding through <strong>Coursera, MIT OpenCourseWare, edX, Stanford Engineering Everywhere</strong>, etc. And I honed my skills by solving math problems at <strong>Project Euler</strong> and other coding competition websites. Recently I also learned web development and built my first full stack app.
   </li>
-  </ul>
+
+
+</ul>
 </p>
 
   <figure>
    <img src="<%= asset_path 'ling_rosenstein.jpg' %>">
   </figure>
+<div class="joke group">
+   <p class="fun">
+     I love coding, so I want to become a software engineer. Nothing is better than that someone pay you for enjoying your hobby.
+  </p>
+  <figure class="awesome">
+   <img class="awesome" src="<%= asset_path 'awesome.jpeg' %>">
+  </figure>
+ </div>
   </main>
+
+
+
+
+
+
+
+
+
 
 
   <footer>
