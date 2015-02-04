@@ -1,3 +1,5 @@
+ <!Doctype>
+ <html>
   <head>
 
     <style>
@@ -50,13 +52,25 @@
     }
 
     h2{
-        color: white;
+
         font-size:36px;
         position: absolute;
         top:10%;
         left: 35%;
         font-family: serif, sans-serif;
         color: yellow;
+    }
+    h6{
+        color: yellow;
+        font-size: 15px;
+        position: absolute;
+        top: 10%;
+        left: 90%;
+
+    }
+    h6:hover{
+        cursor:pointer;
+        color: darkgrey;
     }
 
     h2#last{
@@ -87,6 +101,8 @@
             }
         });
     </script>
+
+        <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 
   <body>
@@ -96,6 +112,7 @@
      <img class="welcome_img" src="<%= asset_path 'welcome.jpg' %>">
     </figure>
     <h2 id="last">I am a web developer, welcome to my world...</h2>
+    <h6 id="replay">Replay Introduction</h6>
 
   <header class= "group">
     <ul class="group">
@@ -131,4 +148,4 @@
 </div>
   </body>
 
-
+</html>
