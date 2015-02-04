@@ -144,8 +144,14 @@
         float: left;
         padding: 20px;
         margin-left: 50px;
+        width:40px;
+        height: 40px;
+        border: 1px solid white;
+        border-radius: 40px;
     }
     .links > li > a{
+
+
         text-decoration: none;
         color: white;
     }
@@ -153,6 +159,25 @@
         cursor:pointer;
         color: grey;
         text-shadow: 0 0 0;
+    }
+    .link-pic{
+        display: block;
+        width: 40px;
+        height: 40px;
+    }
+    .link-pic img{
+        width: 100%;
+        height: 100%;
+    }
+    .links a:hover .link-pic{
+
+    }
+    .links li:hover .link-pic{
+        width:50px;
+        height: 50px;
+    }
+    .links li:hover{
+        box-shadow: -3px -3px 5px black;
     }
     </style>
 
@@ -183,6 +208,7 @@
                     $(pics[n %2]).animate({left: "100%"},0);
                     n = (n+1)%2;
                 }, 0);
+
 
 
             $("#replay").click(function(event){
@@ -232,10 +258,31 @@
      <li><h3 class="no-display">Web Developer . Javascript . Ruby On Rails</h3></li>
     <li>
         <ul class="group  no-display links">
-            <li><a href="./resume.pdf">Resume</a></li>
-            <li><a href="mailto:greekyogurtgirl@gmail.com">Email</a></li>
-            <li><a href="https://github.com/geekygirl76">Github</a></li>
-            <li><a href="https://www.linkedin.com/pub/ling-rosenstein/9b/19/639">LinkedIn</a></li>
+            <li><a>
+                <figure class="link-pic">
+                    <img src="<%= asset_path 'ling.jpg' %>">
+                </figure>
+            </a></li>
+            <li><a href="./resume.pdf">
+                <figure class="link-pic">
+                    <img src="<%= asset_path 'resume.png' %>">
+                </figure>
+            </a></li>
+            <li><a href="mailto:greekyogurtgirl@gmail.com">
+                <figure class="link-pic">
+                    <img src="<%= asset_path 'email.png' %>">
+                </figure>
+            </a></li>
+            <li><a href="https://github.com/geekygirl76">
+                <figure class="link-pic">
+                    <img src="<%= asset_path 'github.png' %>">
+                </figure>
+            </a></li>
+            <li><a href="https://www.linkedin.com/pub/ling-rosenstein/9b/19/639">
+                <figure class="link-pic">
+                    <img src="<%= asset_path 'linkedin.png' %>">
+                </figure>
+            </a></li>
         </ul>
    </li>
   </ul>
