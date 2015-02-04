@@ -18,6 +18,19 @@
       clear: both;
     }
 
+    ul >li{
+        list-style:none;
+    }
+
+    h1{
+        font-weight: bold;
+        text-align: center;
+        font-size:60px;
+    }
+    header{
+        text-align: center;
+    }
+
     #page_one{
         position: absolute;
         top:0;
@@ -119,6 +132,24 @@
         position:absolute;
         top:30%;
         left: 30%;
+        color: white;
+    }
+    .links{
+        margin: auto;
+    }
+    .links > li{
+        display: inline-block;
+        float: left;
+        padding: 20px;
+        margin-left: 50px;
+    }
+    .links > li > a{
+        text-decoration: none;
+        color: white;
+    }
+    .links > li >a :hover{
+        cursor:pointer;
+        color: grey;
     }
     </style>
 
@@ -197,7 +228,7 @@
      <li><h1 class="no-display">Ling Sarah Rosenstein</h1></li>
      <li><h3 class="no-display">Web Developer . Javascript . Ruby On Rails</h3></li>
     <li>
-        <ul class="group  no-display">
+        <ul class="group  no-display links">
             <li><a href="./resume.pdf">Resume</a></li>
             <li><a href="mailto:greekyogurtgirl@gmail.com">Email</a></li>
             <li><a href="https://github.com/geekygirl76">Github</a></li>
