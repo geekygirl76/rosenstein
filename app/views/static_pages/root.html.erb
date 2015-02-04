@@ -60,7 +60,7 @@
         font-family: serif, sans-serif;
         color: yellow;
     }
-    h6{
+    h6#replay{
         color: yellow;
         font-size: 15px;
         position: absolute;
@@ -68,7 +68,19 @@
         left: 90%;
 
     }
-    h6:hover{
+    h6#activate{
+        color: yellow;
+        font-size: 15px;
+        position: absolute;
+        top: 20%;
+        left: 90%;
+
+    }
+    h6#replay:hover{
+        cursor:pointer;
+        color: darkgrey;
+    }
+    h6#activate:hover{
         cursor:pointer;
         color: darkgrey;
     }
@@ -79,6 +91,24 @@
 
     h2#second{
         left: 25%;
+    }
+    .welcome-img{
+        position: absolute;
+        display: inline-block;
+        float: left;
+    }
+    .first{
+        position: absolute;
+        width:100%;
+        display: inline-block;
+        left:0%;
+
+    }
+    .second{
+        position: absolute;
+        width:100%;
+        display: inline-block;
+        left:100%;
     }
 
     </style>
@@ -98,7 +128,43 @@
                         $(list[j]).animate({top: levels[j] + "%"}, 4000);
                     }
                 }, 3000);
-            }
+            };
+
+
+            $("#activate").click(function(){
+                var pics = [".first", ".second"];
+                var n = 0;
+                setInterval(function(){
+                    $(pics[n %2]).animate({left: "-100%"}, 50000);
+                    $(pics[(n+1)%2]).animate({left: "0%"}, 50000);
+                    $(pics[n %2]).animate({left: "100%"},0);
+                    n = (n+1)%2;
+                }, 0);
+            });
+
+            $("#replay").click(function(event){
+                event.preventDefault();
+                event.stopPropagation();
+                levels =[0, -100, -200, -300];
+                for (var m=0; m<4; m++){
+
+                    $(list[m]).animate({top: levels[m] + "%"}, 100);
+                };
+
+                for (var i=0; i <3; i++){
+
+                    setTimeout(function(){
+                        for (var j=0; j<4; j++){
+                            levels[j] += 100;
+                            $(list[j]).animate({top: levels[j] + "%"}, 4000);
+                        }
+                    }, 3000);
+                };
+
+                $(".first").animate({left: "0%"}, 0);
+                $(".second").animate({left: "100%"}, 0);
+
+            });
         });
     </script>
 
@@ -109,12 +175,15 @@
 
 <div id="page_four" class="page">
     <figure class="welcome">
-     <img class="welcome_img" src="<%= asset_path 'welcome.jpg' %>">
+     <img class="welcome_img first" src="<%= asset_path 'welcome.jpg' %>">
+     <img class="welcome_img second" src="<%= asset_path 'welcome.jpg' %>">
     </figure>
     <h2 id="last">I am a web developer, welcome to my world...</h2>
+    <h6 id="activate">Activate</h6>
     <h6 id="replay">Replay Introduction</h6>
 
   <header class= "group">
+
     <ul class="group">
     <li><a href="./resume.pdf">Resume</a></li>
     <li><a href="mailto:greekyogurtgirl@gmail.com">Email</a></li>
