@@ -174,7 +174,7 @@
             };
 
 
-            $("#page_four").hover(function(){
+
                 var pics = [".first", ".second"];
                 var n = 0;
                 setInterval(function(){
@@ -183,7 +183,7 @@
                     $(pics[n %2]).animate({left: "100%"},0);
                     n = (n+1)%2;
                 }, 0);
-            });
+
 
             $("#replay").click(function(event){
                 event.preventDefault();
@@ -223,7 +223,7 @@
     </figure>
     <h2 id="last">I am a web developer, welcome to my world...</h2>
     <h6 id="activate"></h6>
-    <h6 id="replay">Replay Introduction</h6>
+    <h6 id="replay"></h6>
 
 
   <header class= "group">
