@@ -177,9 +177,7 @@
     .links li:hover{
         box-shadow: -3px -3px 5px black;
     }
-    .no-display{
-        display:none;
-    }
+
 
     </style>
 
@@ -211,18 +209,7 @@
                 }, 0);
             }, 15000);
 
-            setTimeout(function(){
 
-                $("li.no-display").each(function(i,v){
-
-                        setTimeout(function(){
-                            $(v).fadeIn(10000);
-                        }, 3000 * i);
-
-
-
-                });
-            },15000);
 
 
 
