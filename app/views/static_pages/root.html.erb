@@ -198,8 +198,7 @@
                 }, 3000);
             };
 
-
-
+            setTimeout(function(){
                 var pics = [".first", ".second"];
                 var n = 0;
                 setInterval(function(){
@@ -208,6 +207,9 @@
                     $(pics[n %2]).animate({left: "100%"},0);
                     n = (n+1)%2;
                 }, 0);
+            }, 15000);
+
+
 
 
 
