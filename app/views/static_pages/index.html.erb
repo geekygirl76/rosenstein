@@ -14,45 +14,69 @@
         background: grey;
 
     }
+    .group:after{
+        display: block;
+        content:"";
+        clear: both;
+    }
+
     figure{
-        position:absolute;
-        top:20%;
-        left:40%;
-        width:200px;
         height: 200px;
+        width: 200px;
     }
-    p.one{
-        position:absolute;
-        top:60%;
-        left: 10%;
-        color:white;
-        line-height: 150%;
-    }
-    p.two{
-        position:absolute;
-        top:70%;
-        left: 10%;
-        color:white;
-        line-height: 150%;
-    }
-    p.three{
-        position:absolute;
-        top:80%;
-        left: 10%;
-        color:white;
-        line-height: 150%;
-    }
+
     img{
-        width: 100%;
-        height: 100%;
+        width: 80%;
+        height: 80%;
+        vertical-align:center;
+        margin-top:30%;
+        margin-left:30%;
+        border: 8px solid grey;
+        border-radius:100px;
+    }
+    p{
+        color: grey;
+        line-height: 150%;
+        font-size: 20px;
+        margin-bottom:20px;
+    }
+    .left{
+        float:left;
+        width:30%;
+    }
+    .right{
+        width: 65%;
+        float: right;
+
+    }
+    .box{
+        background: -webkit-radial-gradient(white, #D8D8D8, #BDBDBD);
+        background: -o-radial-gradient(white, #D8D8D8, #BDBDBD);
+        background: -moz-radial-gradient(white, #D8D8D8, #BDBDBD);
+        background: radial-gradient(white, #D8D8D8, #BDBDBD);
+
+
+        margin-left:8%;
+        margin-right:8%;
+        margin-top:0%;
+
+        border-radius:250px;
+        padding:60px 10px;
+        overflow:hidden;
+        box-shadow: 0 0 200px black;
     }
     </style>
 </head>
 
 <body>
+    <div class="box group">
+        <div class="left">
     <figure >
         <img src="<%= asset_path 'ling2.jpg' %>">
     </figure>
+    </div>
+
+    <div class="right">
     <p class="one">
         Hello, I am Ling. Welcome to my portfolio site!
     </p>
@@ -63,5 +87,8 @@
 <p class="three">
         I love web development like a handyman loves fixing up houses. And I want to join a fast-growing team to allow my coding to reach more people. If your team is expanding and you are looking for a helpful front-end developer with hands-on experience in building web apps, let's talk.
     </p>
+    </div>
+
+    </div>
 </body>
 </html>
