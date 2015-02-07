@@ -20,12 +20,12 @@
         clear: both;
     }
 
-    figure{
+    .left figure{
         height: 200px;
         width: 200px;
     }
 
-    img{
+    .left img{
         width: 80%;
         height: 80%;
         vertical-align:center;
@@ -35,7 +35,7 @@
         border-radius:100px;
         margin-right: 0;
     }
-    p{
+    .right p{
         color: grey;
         line-height: 150%;
         font-size: 20px;
@@ -76,10 +76,10 @@
 <body>
     <div class="box group">
         <div class="left">
-    <figure >
-        <img src="<%= asset_path 'ling2.jpg' %>">
-    </figure>
-    </div>
+        <figure >
+           <img src="<%= asset_path 'ling2.jpg' %>">
+        </figure>
+        </div>
 
     <div class="right">
     <p class="one">
