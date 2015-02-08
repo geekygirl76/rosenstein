@@ -12,6 +12,8 @@
     vertical-align: baseline;
     }
 
+
+
     .group:after{
       content: "";
       display: block;
@@ -186,10 +188,24 @@
         display: block;
         width: 500px;
         height: 300px;
+        background:white;
+        border: 2px solid grey;
+        border-radius: 10px;
+        box-shadow: 0 10px 10px black;
+        text-align: center;
+        color: grey;
+        text-decoration:none;
+    }
+    .project-pic h5{
+        margin:0;
+        padding:0;
+        border: 0;
+        text-decoration:none;
+
     }
     .project-pic img{
         width: 100%;
-        height: 100%;
+        height: 90%;
     }
 
     ul.projects{
@@ -197,7 +213,7 @@
         top:100%;
         left:0;
         width:100%;
-        height: 100%;
+        height: 110%;
         background: grey;
         padding:0;
 
@@ -392,28 +408,36 @@
 
      <li><a href="http://www.ilovediy.ninja/" target="_blank">
          <figure class="project-pic">
+             <caption>I Love DIY</caption>
            <img src="<%= asset_path 'i_love_diy.png' %>">
+
          </figure>
          </a>
      </li>
 
      <li><a href="https://my-chat-app.herokuapp.com/" target="_blank">
          <figure class="project-pic">
+             <caption>Chat App</caption>
            <img src="<%= asset_path 'chat_app.png' %>">
+
          </figure>
          </a>
      </li>
 
      <li><a href="http://geekygirl76.github.io/StarTrek/" target="_blank">
          <figure class="project-pic">
+             <caption>Star Trek</caption>
            <img src="<%= asset_path 'star_trek.png' %>">
+
          </figure>
          </a>
      </li>
 
      <li><a href="http://geekygirl76.github.io/snake/html/index.html" target="_blank">
          <figure class="project-pic">
+             <caption>Snake</caption>
            <img src="<%= asset_path 'snake.png' %>">
+
          </figure>
          </a>
      </li>
