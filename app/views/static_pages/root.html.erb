@@ -263,6 +263,9 @@
 
             };
 
+
+
+
             setTimeout(function(){
                 var pics = [".first", ".second"];
                 var n = 0;
@@ -272,6 +275,10 @@
                     $(pics[n %2]).animate({left: "100%"},0);
                     n = (n+1)%2;
                 }, 0);
+
+                $("#page_one").remove();
+                $("#page_two").remove();
+                $("#page_three").remove();
             }, 15000);
 
 
@@ -339,22 +346,22 @@
                     <img src="<%= asset_path 'ling.jpg' %>">
                 </figure>
             </a></li>
-            <li><a href="./resume.pdf">
+            <li><a href="./resume.pdf" target="_blank">
                 <figure class="link-pic">
                     <img src="<%= asset_path 'resume.png' %>">
                 </figure>
             </a></li>
-            <li><a href="mailto:greekyogurtgirl@gmail.com">
+            <li><a href="mailto:greekyogurtgirl@gmail.com"  target="_blank">
                 <figure class="link-pic">
                     <img src="<%= asset_path 'email.png' %>">
                 </figure>
             </a></li>
-            <li><a href="https://github.com/geekygirl76">
+            <li><a href="https://github.com/geekygirl76"  target="_blank">
                 <figure class="link-pic">
                     <img src="<%= asset_path 'github.png' %>">
                 </figure>
             </a></li>
-            <li><a href="https://www.linkedin.com/pub/ling-rosenstein/9b/19/639">
+            <li><a href="https://www.linkedin.com/pub/ling-rosenstein/9b/19/639"  target="_blank">
                 <figure class="link-pic">
                     <img src="<%= asset_path 'linkedin.png' %>">
                 </figure>
@@ -379,28 +386,28 @@
           </a>
     </li>
 
-     <li><a href="http://www.ilovediy.ninja/">
+     <li><a href="http://www.ilovediy.ninja/" target="_blank">
          <figure class="project-pic">
            <img src="<%= asset_path 'i_love_diy.png' %>">
          </figure>
          </a>
      </li>
 
-     <li><a href="https://my-chat-app.herokuapp.com/">
+     <li><a href="https://my-chat-app.herokuapp.com/" target="_blank">
          <figure class="project-pic">
            <img src="<%= asset_path 'chat_app.png' %>">
          </figure>
          </a>
      </li>
 
-     <li><a href="http://geekygirl76.github.io/StarTrek/">
+     <li><a href="http://geekygirl76.github.io/StarTrek/" target="_blank">
          <figure class="project-pic">
            <img src="<%= asset_path 'star_trek.png' %>">
          </figure>
          </a>
      </li>
 
-     <li><a href="http://geekygirl76.github.io/snake/html/index.html">
+     <li><a href="http://geekygirl76.github.io/snake/html/index.html" target="_blank">
          <figure class="project-pic">
            <img src="<%= asset_path 'snake.png' %>">
          </figure>
