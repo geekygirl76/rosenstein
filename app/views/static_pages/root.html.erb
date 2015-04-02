@@ -274,13 +274,39 @@
         height:100%;
     }
 
+    @media screen and (max-width: 600px){
+        h2{
+            top: 60%;
+            color: black;
+        }
 
+        header{
+            top:5%;
+            margin-left:-30%;
+        }
+
+        header h1{
+            font-size:15px;
+        }
+
+        h3{
+            font-size:12px;
+        }
+
+        .links > li{
+            padding: 5px;
+        }
+
+        .project-button{
+            margin-top:5px;
+        }
+    }
 
     </style>
 
 
 
- <%= stylesheet_link_tag "small-device", media: "screen and (max-width: 600px)"%>
+
 
         <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
